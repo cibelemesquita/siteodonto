@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Odontologia Boutique | Alta Precisão e Estética Dental Exclusiva</title>
+    <meta name="description" content="Transforme sua autoestima com a odontologia de alta costura. Lentes de contato em porcelana, alinhadores invisíveis, implantes guiados e harmonização com tecnologia 3D.">
+    
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#FAF7F0',
+                            100: '#F5EEDD',
+                            200: '#EBDCB9',
+                            300: '#DFC690',
+                            400: '#D4AF37',
+                            500: '#C5A059',
+                            600: '#B08842',
+                            700: '#8E6B2F',
+                            800: '#6C5023',
+                            900: '#463314',
+                        },
+                        champagne: {
+                            light: '#FAF8F5',
+                            base: '#F4EFEA',
+                            dark: '#E8DFD5',
+                            border: '#E3D7C8',
+                            accent: '#D0B48F'
+                        },
+                        graphite: {
+                            50: '#F7F8F9',
+                            100: '#EAECEF',
+                            200: '#CFD4DC',
+                            400: '#717D8F',
+                            600: '#404956',
+                            700: '#2C333D',
+                            800: '#1E232B',
+                            900: '#14171D',
+                        }
+                    },
+                    boxShadow: {
+                        'luxe': '0 20px 40px -15px rgba(197, 160, 89, 0.12), 0 0 1px 1px rgba(197, 160, 89, 0.1)',
+                        'card': '0 10px 30px -5px rgba(20, 23, 29, 0.04), 0 0 0 1px rgba(227, 215, 200, 0.45)',
+                        'card-hover': '0 25px 50px -12px rgba(197, 160, 89, 0.18), 0 0 0 1px rgba(197, 160, 89, 0.5)',
+                        'glow': '0 0 35px rgba(212, 175, 55, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Custom Styling */
+        ::selection {
+            background-color: #EBDCB9;
+            color: #14171D;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #DFCA9E 0%, #C5A059 50%, #B08842 100%);
+        }
+
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #B08842 0%, #D4AF37 50%, #8E6B2F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .champagne-glass {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .luxury-border {
+            border: 1px solid rgba(227, 215, 200, 0.65);
+        }
+
+        /* Ambient Glow animation */
+        @keyframes subtleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .animate-float {
+            animation: subtleFloat 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans bg-[#FAF9F6] text-graphite-800 antialiased selection:bg-gold-200 selection:text-graphite-900 overflow-x-hidden">
+
+    <!-- Top Announcement Bar / Concierge Info -->
+    <div class="bg-graphite-900 text-gold-200 text-xs py-2.5 px-4 tracking-wider uppercase border-b border-gold-900/40">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                <span>Atendimento Exclusivo com Hora Marcada | Unidades Jardins & Faria Lima</span>
+            </div>
+            <div class="flex items-center gap-6 font-medium">
+                <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i> Tecnologia 3D CAD/CAM</span>
+                <span class="hidden md:flex items-center gap-1.5"><i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i> Equipe com Mestrado e Doutorado</span>
+                <a href="#contato" class="text-white hover:text-gold-300 transition-colors underline underline-offset-4">Concierge VIP</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-50 champagne-glass border-b border-champagne-border/60 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full gold-gradient-bg flex items-center justify-center text-graphite-900 font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                    A
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-tight text-graphite-900 leading-none">
+                        AURA
+                    </span>
+                    <span class="text-[9px] tracking-[0.25em] uppercase text-gold-600 font-semibold mt-1">
+                        Odontologia Boutique
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-graphite-700">
+                <a href="#especialidades" class="hover:text-gold-600 transition-colors duration-200">Especialidades</a>
+                <a href="#diferenciais" class="hover:text-gold-600 transition-colors duration-200">A Experiência Aura</a>
+                <a href="#corpo-clinico" class="hover:text-gold-600 transition-colors duration-200">Corpo Clínico</a>
+                <a href="#depoimentos" class="hover:text-gold-600 transition-colors duration-200">Transformações</a>
+                <a href="#faq" class="hover:text-gold-600 transition-colors duration-200">Dúvidas Frequentes</a>
+            </nav>
+
+            <!-- Quick Action CTA -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="flex items-center gap-2 text-xs font-semibold text-graphite-700 hover:text-gold-600 transition-colors py-2 px-3">
+                    <i data-lucide="phone" class="w-4 h-4 text-gold-500"></i>
+                    <span>(11) 3042-8800</span>
+                </a>
+                <a href="#contato" class="relative group inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-graphite-950 gold-gradient-bg shadow-md hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Agendar Avaliação
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Trigger -->
+            <button id="mobile-menu-btn" aria-label="Abrir menu" class="lg:hidden p-2.5 rounded-xl text-graphite-700 hover:bg-gold-100/50 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-champagne-border bg-[#FAF9F6] px-6 py-6 space-y-4 shadow-xl">
+            <a href="#especialidades" class="mobile-nav-link block text-base font-medium text-graphite-800 hover:text-gold-600 py-1">Especialidades</a>
+            <a href="#diferenciais" class="mobile-nav-link block text-base font-medium text-graphite-800 hover:text-gold-600 py-1">A Experiência Aura</a>
+            <a href="#corpo-clinico" class="mobile-nav-link block text-base font-medium text-graphite-800 hover:text-gold-600 py-1">Corpo Clínico</a>
+            <a href="#depoimentos" class="mobile-nav-link block text-base font-medium text-graphite-800 hover:text-gold-600 py-1">Transformações</a>
+            <a href="#faq" class="mobile-nav-link block text-base font-medium text-graphite-800 hover:text-gold-600 py-1">Dúvidas Frequentes</a>
+            <div class="pt-4 border-t border-champagne-border/80 flex flex-col gap-3">
+                <a href="#contato" class="mobile-nav-link w-full py-3.5 rounded-2xl text-center text-xs uppercase tracking-wider font-semibold text-graphite-950 gold-gradient-bg shadow-md">
+                    Agendar Avaliação VIP
+                </a>
+                <a href="https://wa.me/5511999999999" class="w-full py-3 text-center text-xs font-semibold text-graphite-700 flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> Falar via WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================================================= -->
+        <!-- 1. HERO SECTION -->
+        <!-- ========================================================================= -->
+        <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+            <!-- Background Ambient Glows -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-gold-200/40 via-champagne-light to-transparent rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div class="absolute -top-10 right-0 w-96 h-96 bg-gold-100/30 rounded-full blur-2xl -z-10 pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content / Value Proposition -->
+                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                        <!-- Premium Badge -->
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-champagne-base/80 border border-gold-300/60 shadow-sm text-xs font-semibold text-gold-800">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>
+                            <span>A Nova Era da Alta Estética Odontológica</span>
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-500"></i>
+                        </div>
+
+                        <!-- Main Title -->
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-graphite-900 leading-[1.15] tracking-tight">
+                            A alta costura do seu sorriso: <br class="hidden sm:inline">
+                            <span class="gold-text-gradient italic font-normal">harmonia milimétrica</span>, elegância e naturalidade.
+                        </h1>
+
+                        <!-- Subtitle / Value Proposition -->
+                        <p class="text-graphite-600 text-base sm:text-lg lg:text-xl font-normal max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                            Unimos a precisão do escaneamento digital 3D à maestria artística de ceramistas renomados. Recupere a confiança de um sorriso exclusivo, desenhado sob medida para a sua anatomia facial.
+                        </p>
+
+                        <!-- CTA Group -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#contato" id="hero-cta-btn" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider text-graphite-950 gold-gradient-bg shadow-luxe hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center justify-center gap-3">
+                                <span>Agendar Avaliação Personalizada</span>
+                                <i data-lucide="calendar-check" class="w-4 h-4 text-graphite-950"></i>
+                            </a>
+                            <a href="#especialidades" class="w-full sm:w-auto px-7 py-4 rounded-full text-sm font-semibold text-graphite-700 bg-white/80 hover:bg-white border border-champagne-border hover:border-gold-300 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2">
+                                <span>Conhecer Tratamentos</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-gold-600"></i>
+                            </a>
+                        </div>
+
+                        <!-- Social Proof Bar Under CTA -->
+                        <div class="pt-6 border-t border-champagne-border/70 flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 text-graphite-700 text-xs">
+                            <div class="flex items-center gap-3">
+                                <div class="flex -space-x-2">
+                                    <img class="inline-block h-8 w-8 rounded-full ring-2 ring-[#FAF9F6] object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Paciente Aura">
+                                    <img class="inline-block h-8 w-8 rounded-full ring-2 ring-[#FAF9F6] object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Paciente Aura">
+                                    <img class="inline-block h-8 w-8 rounded-full ring-2 ring-[#FAF9F6] object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Paciente Aura">
+                                    <div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold-200 text-graphite-900 font-bold text-[10px] ring-2 ring-[#FAF9F6]">
+                                        +4k
+                                    </div>
+                                </div>
+                                <div class="text-left">
+                                    <div class="flex text-amber-400">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                    </div>
+                                    <span class="font-semibold text-graphite-900">4.9/5.0 no Google Reviews</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2 border-l border-champagne-border pl-6">
+                                <div class="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center text-gold-700">
+                                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <span class="font-bold text-graphite-900 block leading-tight">Digital Smile Design</span>
+                                    <span class="text-graphite-500 text-[11px]">Planejamento 100% Guiado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual / Imagery Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <!-- Main Artistic Visual -->
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 aspect-[4/5] bg-champagne-dark">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85" 
+                                    alt="Sorriso natural e harmonioso em ambiente clínico de luxo" 
+                                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-graphite-900/60 via-transparent to-transparent"></div>
+                                
+                                <div class="absolute bottom-6 left-6 right-6 text-white p-5 rounded-2xl champagne-glass !bg-graphite-900/70 border border-white/20 backdrop-blur-md">
+                                    <p class="text-xs uppercase tracking-widest text-gold-300 font-semibold mb-1">Tecnologia & Arte</p>
+                                    <p class="text-sm font-medium text-white/95 leading-snug">"O sorriso perfeito não é artificial. É a revelação da sua melhor versão anatômica."</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Floating Card Badge 1: 3D Scanner -->
+                            <div class="absolute -top-6 -left-6 bg-white/95 rounded-2xl p-4 shadow-card luxury-border backdrop-blur-md hidden sm:flex items-center gap-3 animate-float">
+                                <div class="w-10 h-10 rounded-xl gold-gradient-bg flex items-center justify-center text-graphite-900 shadow-sm">
+                                    <i data-lucide="scan" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-graphite-900">Escaneamento 3D</p>
+                                    <p class="text-[11px] text-graphite-500">Sem moldagens desconfortáveis</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Floating Card Badge 2: Pain-Free Experience -->
+                            <div class="absolute -bottom-6 -right-6 bg-white/95 rounded-2xl p-4 shadow-card luxury-border backdrop-blur-md hidden sm:flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-gold-100 flex items-center justify-center text-gold-700">
+                                    <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-graphite-900">Sedação Consciente</p>
+                                    <p class="text-[11px] text-graphite-500">Conforto absoluto e sem dor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 2. ESPECIALIDADES (SERVICES) -->
+        <!-- ========================================================================= -->
+        <section id="especialidades" class="py-24 bg-white relative border-y border-champagne-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase inline-block">Nossas Áreas de Maestria</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-graphite-900 tracking-tight">
+                        Especialidades que redefinem o conceito de excelência odontológica
+                    </h2>
+                    <p class="text-graphite-600 text-base leading-relaxed">
+                        Tratamentos minimamente invasivos, planejados digitalmente para preservar sua estrutura dental biológica com longevidade inquestionável.
+                    </p>
+                </div>
+
+                <!-- Specialties Grid (4 Minimalist Interactive Cards) -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    
+                    <!-- Card 1: Estética Dental (Lentes de Contato) -->
+                    <div class="group relative bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <!-- Icon & Counter -->
+                            <div class="flex items-center justify-between">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-champagne-border flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+                                    <i data-lucide="sparkle" class="w-7 h-7"></i>
+                                </div>
+                                <span class="font-serif text-2xl text-gold-400/60 font-light">01</span>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-3">
+                                <h3 class="font-serif text-2xl font-semibold text-graphite-900 group-hover:text-gold-700 transition-colors">
+                                    Estética Dental <br>
+                                    <span class="text-lg font-sans font-normal text-graphite-500">(Lentes de Contato)</span>
+                                </h3>
+                                <p class="text-sm text-graphite-600 leading-relaxed">
+                                    Lâminas cerâmicas ultrafinas confeccionadas com tecnologia suíça. Correção de formato, cor, textura e proporção com desgaste mínimo e translucidez natural.
+                                </p>
+                            </div>
+
+                            <!-- Bullet Points -->
+                            <ul class="space-y-2 pt-2 text-xs text-graphite-600 border-t border-champagne-border/60">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Porcelana Feldspática e Dissilicato
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Mock-up (Test drive do sorriso)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Alta durabilidade (15+ anos)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Card Action -->
+                        <div class="pt-6 mt-6 border-t border-champagne-border/40">
+                            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-graphite-900 group-hover:text-gold-600 transition-colors">
+                                <span>Saber Detalhes</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Ortodontia Invisível (Alinhadores) -->
+                    <div class="group relative bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <!-- Icon & Counter -->
+                            <div class="flex items-center justify-between">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-champagne-border flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+                                    <i data-lucide="smile" class="w-7 h-7"></i>
+                                </div>
+                                <span class="font-serif text-2xl text-gold-400/60 font-light">02</span>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-3">
+                                <h3 class="font-serif text-2xl font-semibold text-graphite-900 group-hover:text-gold-700 transition-colors">
+                                    Ortodontia Invisível <br>
+                                    <span class="text-lg font-sans font-normal text-graphite-500">(Alinhadores 3D)</span>
+                                </h3>
+                                <p class="text-sm text-graphite-600 leading-relaxed">
+                                    Alinhamento dentário discreto, confortável e removível. Simulação digital precisa do resultado antes mesmo de iniciar o tratamento.
+                                </p>
+                            </div>
+
+                            <!-- Bullet Points -->
+                            <ul class="space-y-2 pt-2 text-xs text-graphite-600 border-t border-champagne-border/60">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Invisalign® Top Doctor Certified
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Tratamentos até 50% mais rápidos
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Liberdade alimentar total
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Card Action -->
+                        <div class="pt-6 mt-6 border-t border-champagne-border/40">
+                            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-graphite-900 group-hover:text-gold-600 transition-colors">
+                                <span>Saber Detalhes</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Implantodontia Avançada -->
+                    <div class="group relative bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <!-- Icon & Counter -->
+                            <div class="flex items-center justify-between">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-champagne-border flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+                                    <i data-lucide="shield" class="w-7 h-7"></i>
+                                </div>
+                                <span class="font-serif text-2xl text-gold-400/60 font-light">03</span>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-3">
+                                <h3 class="font-serif text-2xl font-semibold text-graphite-900 group-hover:text-gold-700 transition-colors">
+                                    Implantodontia <br>
+                                    <span class="text-lg font-sans font-normal text-graphite-500">(Carga Imediata & Guiada)</span>
+                                </h3>
+                                <p class="text-sm text-graphite-600 leading-relaxed">
+                                    Reabilitação oral com implantes importados de zircônia e titânio puro. Cirurgia guiada por computador sem incisões extensas nem pontos dolorosos.
+                                </p>
+                            </div>
+
+                            <!-- Bullet Points -->
+                            <ul class="space-y-2 pt-2 text-xs text-graphite-600 border-t border-champagne-border/60">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Dentes fixos no mesmo dia
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Guias cirúrgicos 3D de precisão
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Ósseointegração acelerada
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Card Action -->
+                        <div class="pt-6 mt-6 border-t border-champagne-border/40">
+                            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-graphite-900 group-hover:text-gold-600 transition-colors">
+                                <span>Saber Detalhes</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Harmonização Orofacial & Estética Facial -->
+                    <div class="group relative bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <!-- Icon & Counter -->
+                            <div class="flex items-center justify-between">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-champagne-border flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+                                    <i data-lucide="gem" class="w-7 h-7"></i>
+                                </div>
+                                <span class="font-serif text-2xl text-gold-400/60 font-light">04</span>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-3">
+                                <h3 class="font-serif text-2xl font-semibold text-graphite-900 group-hover:text-gold-700 transition-colors">
+                                    Harmonização <br>
+                                    <span class="text-lg font-sans font-normal text-graphite-500">(Orofacial & Facial)</span>
+                                </h3>
+                                <p class="text-sm text-graphite-600 leading-relaxed">
+                                    Equilíbrio perfeito entre lábios, contornos da mandíbula e sorriso. Protocolos individualizados de bioestimulação e preenchimento com elegância discreta.
+                                </p>
+                            </div>
+
+                            <!-- Bullet Points -->
+                            <ul class="space-y-2 pt-2 text-xs text-graphite-600 border-t border-champagne-border/60">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Bioestimuladores de colágeno
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Escultura labial de alta definição
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-gold-500"></i> Resultados naturais e elegantes
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Card Action -->
+                        <div class="pt-6 mt-6 border-t border-champagne-border/40">
+                            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-graphite-900 group-hover:text-gold-600 transition-colors">
+                                <span>Saber Detalhes</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Banner -->
+                <div class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-graphite-900 via-graphite-800 to-graphite-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                    <div class="space-y-2 text-center md:text-left">
+                        <h4 class="font-serif text-2xl font-semibold text-gold-200">Não sabe qual procedimento é o ideal para você?</h4>
+                        <p class="text-graphite-300 text-sm max-w-xl">
+                            Realizamos uma consulta de diagnóstico minucioso com escaneamento 3D de alta definição para planejar seu caso.
+                        </p>
+                    </div>
+                    <a href="#contato" class="px-7 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-graphite-950 gold-gradient-bg shadow-md hover:scale-105 transition-all whitespace-nowrap">
+                        Solicitar Consulta Diagnóstica
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 3. DIFERENCIAIS & CORPO CLÍNICO (A EXPERIÊNCIA & DENTISTA CHEFE) -->
+        <!-- ========================================================================= -->
+        <section id="diferenciais" class="py-24 bg-[#FAF9F6] relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+                
+                <!-- Part A: Clinical Experience & 3D Technology -->
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left: Feature Cards -->
+                    <div class="lg:col-span-6 space-y-8">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase">Hospitalidade & Tecnologia</span>
+                            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-graphite-900 leading-tight">
+                                Uma experiência odontológica concebida para o seu máximo conforto.
+                            </h2>
+                            <p class="text-graphite-600 text-base leading-relaxed">
+                                Deixe para trás qualquer trauma ou receio do passado. Na Clínica Aura, cada detalhe — do aroma exclusivo do ambiente às suítes de atendimento acústicas — foi desenhado para proporcionar tranquilidade e precisão médica.
+                            </p>
+                        </div>
+
+                        <!-- 3 Pillars -->
+                        <div class="space-y-4">
+                            <!-- Pillar 1 -->
+                            <div class="p-5 rounded-2xl bg-white border border-champagne-border shadow-sm flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 shrink-0">
+                                    <i data-lucide="scan-face" class="w-6 h-6"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-bold text-graphite-900">Escaneamento Intraoral Trios 3D & Tomografia</h4>
+                                    <p class="text-xs text-graphite-600 leading-relaxed">
+                                        Captura digital instantânea da sua arcada com resolução micrométrica. Diagnósticos sem pastas ou moldes incômodos.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Pillar 2 -->
+                            <div class="p-5 rounded-2xl bg-white border border-champagne-border shadow-sm flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 shrink-0">
+                                    <i data-lucide="feather" class="w-6 h-6"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-bold text-graphite-900">Protocolo de Odontologia Sem Dor & Sedação Inalatória</h4>
+                                    <p class="text-xs text-graphite-600 leading-relaxed">
+                                        Anestesia computadorizada indolor e sedação consciente para que você realize seus procedimentos relaxado e sem ansiedade.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Pillar 3 -->
+                            <div class="p-5 rounded-2xl bg-white border border-champagne-border shadow-sm flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 shrink-0">
+                                    <i data-lucide="coffee" class="w-6 h-6"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-bold text-graphite-900">Ambiente Boutique & Concierge Privativo</h4>
+                                    <p class="text-xs text-graphite-600 leading-relaxed">
+                                        Salas com isolamento acústico, menu de conforto, fones com cancelamento de ruído e estacionamento privativo com manobrista.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Clinic Gallery / Ambiance -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-4">
+                                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Consultório odontológico de luxo com vista panorâmica" class="rounded-3xl shadow-md object-cover h-64 w-full">
+                                <div class="p-6 rounded-3xl bg-gold-900 text-gold-100 space-y-2">
+                                    <p class="text-3xl font-serif font-bold text-gold-300">100%</p>
+                                    <p class="text-xs text-gold-200">Digital Smile Design: Visualize o resultado final antes da primeira intervenção.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4 pt-8">
+                                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Tecnologia médica odontológica de ponta" class="rounded-3xl shadow-md object-cover h-80 w-full">
+                                <div class="p-4 rounded-2xl bg-white border border-champagne-border text-center">
+                                    <span class="text-xs font-bold text-graphite-800">Certificação ISO & Biossegurança Hospitalar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Part B: Lead Doctor / Clinical Director Bio (Corpo Clínico) -->
+                <div id="corpo-clinico" class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-champagne-border shadow-luxe">
+                    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                        
+                        <!-- Doctor Portrait -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FAF9F6] aspect-[3/4] bg-stone-100">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" 
+                                    alt="Dr. Alexandre Vance - Diretor Clínico da Aura Odontologia" 
+                                    class="w-full h-full object-cover object-top"
+                                >
+                            </div>
+                            <!-- Small overlay badge -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-graphite-900/90 text-white p-4 rounded-2xl backdrop-blur-md text-center border border-gold-500/30">
+                                <p class="text-xs text-gold-300 font-semibold tracking-wider uppercase">Responsável Técnico</p>
+                                <p class="text-sm font-bold">CRO-SP 108.432 | EPAO 14.890</p>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Biography & Credentials -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase">Direção Clínica & Autoria</span>
+                                <h3 class="font-serif text-3xl sm:text-4xl font-semibold text-graphite-900">
+                                    Dr. Alexandre Vance, Ph.D.
+                                </h3>
+                                <p class="text-sm text-gold-700 font-medium">
+                                    Especialista e Mestre em Dentística Restauradora e Prótese Dental (USP)
+                                </p>
+                            </div>
+
+                            <p class="text-graphite-600 text-sm sm:text-base leading-relaxed">
+                                Com mais de 16 anos dedicados exclusivamente à reabilitação estética do sorriso, o Dr. Alexandre Vance combina rigor acadêmico com uma sensibilidade artística apurada. Formado pela USP com especialização em Cerâmicas Avançadas em Zurique e Los Angeles, é membro ativo da Sociedade Brasileira de Odontologia Estética (SBOE) e palestrante internacional.
+                            </p>
+
+                            <p class="text-graphite-600 text-sm leading-relaxed italic border-l-2 border-gold-400 pl-4">
+                                "Nossa filosofia não é padronizar sorrisos artificiais ou brancos em excesso. Criamos sorrisos que harmonizam com o olhar, o tom da pele e a personalidade de cada indivíduo."
+                            </p>
+
+                            <!-- Credentials Badges Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                                <div class="p-3.5 rounded-2xl bg-[#FAF9F6] border border-champagne-border text-center">
+                                    <i data-lucide="graduation-cap" class="w-5 h-5 text-gold-600 mx-auto mb-1"></i>
+                                    <p class="text-xs font-bold text-graphite-900">Mestre & Doutor</p>
+                                    <p class="text-[10px] text-graphite-500">USP & Fellow Suíça</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-2xl bg-[#FAF9F6] border border-champagne-border text-center">
+                                    <i data-lucide="award" class="w-5 h-5 text-gold-600 mx-auto mb-1"></i>
+                                    <p class="text-xs font-bold text-graphite-900">Membro SBOE</p>
+                                    <p class="text-[10px] text-graphite-500">Soc. Odonto Estética</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-2xl bg-[#FAF9F6] border border-champagne-border text-center col-span-2 sm:col-span-1">
+                                    <i data-lucide="users" class="w-5 h-5 text-gold-600 mx-auto mb-1"></i>
+                                    <p class="text-xs font-bold text-graphite-900">+4.800 Casos</p>
+                                    <p class="text-[10px] text-graphite-500">Clínicos Concluídos</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <a href="#contato" class="inline-flex items-center gap-3 text-xs uppercase tracking-wider font-semibold text-graphite-900 hover:text-gold-600 transition-colors">
+                                    <span>Agendar conversa com Dr. Alexandre</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-gold-600"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 4. DEPOIMENTOS & TRANSFORMAÇÕES (HISTÓRIAS REAIS) -->
+        <!-- ========================================================================= -->
+        <section id="depoimentos" class="py-24 bg-white relative border-b border-champagne-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase inline-block">Histórias de Transformação</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-graphite-900 tracking-tight">
+                        A satisfação de quem conquistou a sua melhor versão
+                    </h2>
+                    <p class="text-graphite-600 text-base leading-relaxed">
+                        Conheça relatos autênticos de pacientes que confiaram no cuidado e na precisão da clínica Aura para transformar sua presença e autoestima.
+                    </p>
+                </div>
+
+                <!-- Testimonials Grid (3 Editorial Cards) -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card flex flex-col justify-between space-y-6 hover:shadow-card-hover transition-all duration-300">
+                        <div class="space-y-4">
+                            <!-- Star Rating -->
+                            <div class="flex text-amber-400 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+
+                            <!-- Quote -->
+                            <p class="text-graphite-700 text-sm sm:text-base leading-relaxed italic">
+                                "Eu tinha receio de colocar lentes de contato e ficar com aspecto artificial de ‘teclado de piano’. O Dr. Alexandre fez o teste 3D antes e a naturalidade das cerâmicas ficou impecável. Mudou totalmente minha postura em reuniões e gravações."
+                            </p>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div class="flex items-center gap-4 pt-6 border-t border-champagne-border/60">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Dra. Beatriz Menezes" class="w-13 h-13 w-12 h-12 rounded-full object-cover ring-2 ring-gold-300">
+                            <div>
+                                <h4 class="font-bold text-graphite-900 text-sm">Beatriz Menezes</h4>
+                                <p class="text-xs text-graphite-500">Empresária | Lentes de Contato em Porcelana</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card flex flex-col justify-between space-y-6 hover:shadow-card-hover transition-all duration-300">
+                        <div class="space-y-4">
+                            <!-- Star Rating -->
+                            <div class="flex text-amber-400 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+
+                            <!-- Quote -->
+                            <p class="text-graphite-700 text-sm sm:text-base leading-relaxed italic">
+                                "O atendimento boutique é surreal. Fiz o alinhamento com Invisalign e sedação para um pequeno procedimento cirúrgico. Nem parece consultório médico de tão calmo e elegante. Recomendo de olhos fechados."
+                            </p>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div class="flex items-center gap-4 pt-6 border-t border-champagne-border/60">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Guilherme Prado" class="w-12 h-12 rounded-full object-cover ring-2 ring-gold-300">
+                            <div>
+                                <h4 class="font-bold text-graphite-900 text-sm">Guilherme Prado</h4>
+                                <p class="text-xs text-graphite-500">Diretor de Arte | Alinhadores & Clareamento</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-[#FAF9F6] rounded-3xl p-8 border border-champagne-border/80 shadow-card flex flex-col justify-between space-y-6 hover:shadow-card-hover transition-all duration-300">
+                        <div class="space-y-4">
+                            <!-- Star Rating -->
+                            <div class="flex text-amber-400 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+
+                            <!-- Quote -->
+                            <p class="text-graphite-700 text-sm sm:text-base leading-relaxed italic">
+                                "Após anos com vergonha de sorrir por conta de dentes desgastados pelo bruxismo, a equipe da Aura fez a reabilitação com implantes guiados e cerâmicas. O resultado superou todas as minhas expectativas."
+                            </p>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div class="flex items-center gap-4 pt-6 border-t border-champagne-border/60">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Mariana Albuquerque" class="w-12 h-12 rounded-full object-cover ring-2 ring-gold-300">
+                            <div>
+                                <h4 class="font-bold text-graphite-900 text-sm">Mariana Albuquerque</h4>
+                                <p class="text-xs text-graphite-500">Arquiteta | Reabilitação Oral & Implante</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Google Rating Badge Strip -->
+                <div class="mt-16 flex flex-wrap items-center justify-center gap-6 p-6 rounded-2xl bg-champagne-light border border-champagne-border/60 text-graphite-700 text-xs text-center">
+                    <span class="font-semibold text-graphite-900">Avaliações Verificadas:</span>
+                    <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> +320 avaliações 5 estrelas no Google</span>
+                    <span class="inline-flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-gold-600"></i> Prêmio Excelência em Odontologia Estética 2024</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 5. FAQ (DÚVIDAS FREQUENTES) -->
+        <!-- ========================================================================= -->
+        <section id="faq" class="py-20 bg-[#FAF9F6] border-b border-champagne-border/60">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 mb-12">
+                    <span class="text-xs font-bold tracking-[0.2em] text-gold-600 uppercase">Esclareça suas dúvidas</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-graphite-900">Perguntas Frequentes</h2>
+                </div>
+
+                <div class="space-y-4" id="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl border border-champagne-border overflow-hidden transition-all duration-200">
+                        <button class="w-full p-6 text-left font-semibold text-graphite-900 flex justify-between items-center gap-4 faq-toggle focus:outline-none">
+                            <span class="text-base font-serif">As lentes de contato desgastam muito os dentes naturais?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-graphite-600 leading-relaxed border-t border-champagne-border/40 pt-4">
+                            Não. Na Clínica Aura utilizamos a técnica minimamente invasiva com espessuras cerâmicas ultrafinas (de 0,2mm a 0,5mm). Em muitos casos, o preparo é mínimo ou mesmo sem desgaste da estrutura do esmalte sadio.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl border border-champagne-border overflow-hidden transition-all duration-200">
+                        <button class="w-full p-6 text-left font-semibold text-graphite-900 flex justify-between items-center gap-4 faq-toggle focus:outline-none">
+                            <span class="text-base font-serif">É possível ver o resultado do sorriso antes de iniciar?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-graphite-600 leading-relaxed border-t border-champagne-border/40 pt-4">
+                            Sim! Através do Digital Smile Design (DSD) e do "Mock-up" (test-drive do sorriso), aplicamos provisórios em boca para você se olhar no espelho, avaliar com sua família e aprovar o formato antes de produzirmos as peças definitivas.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl border border-champagne-border overflow-hidden transition-all duration-200">
+                        <button class="w-full p-6 text-left font-semibold text-graphite-900 flex justify-between items-center gap-4 faq-toggle focus:outline-none">
+                            <span class="text-base font-serif">Como funciona a sedação consciente para quem tem fobia de dentista?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-graphite-600 leading-relaxed border-t border-champagne-border/40 pt-4">
+                            Realizamos sedação inalatória (óxido nitroso) ou medicamentosa acompanhada. O paciente permanece consciente e responsivo, porém em estado de extremo relaxamento e sem qualquer sensação de dor ou estresse.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-2xl border border-champagne-border overflow-hidden transition-all duration-200">
+                        <button class="w-full p-6 text-left font-semibold text-graphite-900 flex justify-between items-center gap-4 faq-toggle focus:outline-none">
+                            <span class="text-base font-serif">A clínica aceita convênios odontológicos?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-graphite-600 leading-relaxed border-t border-champagne-border/40 pt-4">
+                            Para garantir tempo integral de consulta personalizada e materiais cerâmicos importados de máxima nobreza, atendemos de forma exclusivamente particular. No entanto, fornecemos toda a documentação e relatórios detalhados para solicitação de reembolso junto ao seu plano de saúde.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 6. CONTATO & AGENDAMENTO VIP INTEGRADO NO FOOTER -->
+        <!-- ========================================================================= -->
+        <section id="contato" class="py-24 bg-graphite-950 text-white relative overflow-hidden">
+            <!-- Decorative Glow -->
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                    
+                    <!-- Left Column: Contact Details & Brand Info -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="space-y-4">
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-900/40 border border-gold-600/30 text-xs font-semibold text-gold-300">
+                                <span>Atendimento Concierge VIP</span>
+                            </div>
+                            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
+                                Dê o primeiro passo para o sorriso que você sempre mereceu.
+                            </h2>
+                            <p class="text-graphite-300 text-sm sm:text-base leading-relaxed">
+                                Nossa equipe de concierge entrará em contato em minutos para entender suas necessidades e agendar sua avaliação com hora reservada.
+                            </p>
+                        </div>
+
+                        <!-- Direct Contacts List -->
+                        <div class="space-y-5 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-graphite-800 border border-gold-500/20 flex items-center justify-center text-gold-400 shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Unidade Jardins (Principal)</p>
+                                    <p class="text-graphite-400 text-xs">Alameda Gabriel Monteiro da Silva, 1820 - Jardins, São Paulo - SP</p>
+                                    <p class="text-[11px] text-gold-400 mt-0.5">Estacionamento com manobrista no local</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-graphite-800 border border-gold-500/20 flex items-center justify-center text-gold-400 shrink-0">
+                                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Telefone & WhatsApp Direto</p>
+                                    <p class="text-graphite-400 text-xs">(11) 3042-8800 / (11) 99888-7766</p>
+                                    <p class="text-[11px] text-graphite-500">Segunda a Sexta: 08h às 20h | Sábados: 08h às 14h</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-graphite-800 border border-gold-500/20 flex items-center justify-center text-gold-400 shrink-0">
+                                    <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Responsabilidade Técnica</p>
+                                    <p class="text-graphite-400 text-xs">Dr. Alexandre Vance - CRO-SP 108.432</p>
+                                    <p class="text-graphite-400 text-xs">AURA Odontologia Boutique LTDA - EPAO 14.890</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="pt-4 border-t border-graphite-800/80">
+                            <p class="text-xs uppercase tracking-widest text-graphite-400 font-semibold mb-3">Acompanhe nossas transformações</p>
+                            <div class="flex items-center gap-3">
+                                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full bg-graphite-800 hover:bg-gold-500 hover:text-graphite-950 transition-colors flex items-center justify-center text-graphite-300">
+                                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-graphite-800 hover:bg-gold-500 hover:text-graphite-950 transition-colors flex items-center justify-center text-graphite-300">
+                                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="w-10 h-10 rounded-full bg-graphite-800 hover:bg-gold-500 hover:text-graphite-950 transition-colors flex items-center justify-center text-graphite-300">
+                                    <i data-lucide="youtube" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-emerald-950 border border-emerald-500/30 hover:bg-emerald-600 text-emerald-400 hover:text-white transition-colors flex items-center justify-center">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Interactive VIP Booking Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-graphite-900/90 border border-gold-500/25 rounded-3xl p-8 sm:p-10 shadow-2xl backdrop-blur-xl relative">
+                            
+                            <div class="mb-8 space-y-2">
+                                <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-white">
+                                    Solicitar Pré-Agendamento VIP
+                                </h3>
+                                <p class="text-graphite-400 text-xs sm:text-sm">
+                                    Preencha os campos abaixo. Nosso concierge retornará com as opções de horários privativos.
+                                </p>
+                            </div>
+
+                            <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5" novalidate>
+                                <!-- Web3Forms Config & Hidden Fields -->
+                                <input type="hidden" name="access_key" value="04a00bb9-0678-4390-883d-f2014d7b25f5">
+                                <input type="hidden" name="subject" value="Novo Pré-Agendamento VIP - AURA Odontologia Boutique">
+                                <input type="hidden" name="from_name" value="Concierge AURA Odontologia">
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                                <!-- Inline Error Banner (Hidden by default) -->
+                                <div id="form-error-banner" class="hidden p-4 rounded-xl bg-red-950/80 border border-red-500/50 text-red-200 text-xs flex items-start gap-3 transition-all duration-300">
+                                    <i data-lucide="alert-circle" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+                                    <div class="space-y-1">
+                                        <p class="font-bold text-red-100" id="error-title">Erro ao enviar solicitação</p>
+                                        <p class="text-red-300 text-[11px] leading-relaxed" id="error-message">Por favor, confira os dados preenchidos ou tente novamente mais tarde.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Name Input -->
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Nome Completo *</label>
+                                    <div class="relative">
+                                        <input 
+                                            type="text" 
+                                            id="name" 
+                                            name="name" 
+                                            required 
+                                            placeholder="Ex: Dra. Juliana Silveira"
+                                            class="w-full bg-graphite-800/80 border border-graphite-700 focus:border-gold-400 rounded-xl px-4 py-3.5 text-sm text-white placeholder-graphite-500 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors"
+                                        >
+                                    </div>
+                                    <p id="name-error" class="text-[11px] text-red-400 mt-1 hidden">Por favor, informe seu nome completo.</p>
+                                </div>
+
+                                <!-- WhatsApp / Phone & Email Grid -->
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="phone" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">WhatsApp / Telefone *</label>
+                                        <input 
+                                            type="tel" 
+                                            id="phone" 
+                                            name="phone" 
+                                            required 
+                                            placeholder="(11) 99999-9999"
+                                            class="w-full bg-graphite-800/80 border border-graphite-700 focus:border-gold-400 rounded-xl px-4 py-3.5 text-sm text-white placeholder-graphite-500 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors"
+                                        >
+                                        <p id="phone-error" class="text-[11px] text-red-400 mt-1 hidden">Informe um número de telefone/WhatsApp válido.</p>
+                                    </div>
+
+                                    <div>
+                                        <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">E-mail Profissional *</label>
+                                        <input 
+                                            type="email" 
+                                            id="email" 
+                                            name="email" 
+                                            required
+                                            placeholder="seuemail@exemplo.com"
+                                            class="w-full bg-graphite-800/80 border border-graphite-700 focus:border-gold-400 rounded-xl px-4 py-3.5 text-sm text-white placeholder-graphite-500 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors"
+                                        >
+                                        <p id="email-error" class="text-[11px] text-red-400 mt-1 hidden">Informe um e-mail válido.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Specialty & Preferred Period -->
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="specialty" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Tratamento de Interesse *</label>
+                                        <select 
+                                            id="specialty" 
+                                            name="specialty" 
+                                            required 
+                                            class="w-full bg-graphite-800 border border-graphite-700 focus:border-gold-400 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors cursor-pointer"
+                                        >
+                                            <option value="" disabled selected class="text-graphite-500">Selecione uma especialidade</option>
+                                            <option value="Estética Dental (Lentes de Contato)">Estética Dental (Lentes de Contato)</option>
+                                            <option value="Ortodontia Invisível (Alinhadores)">Ortodontia Invisível (Alinhadores)</option>
+                                            <option value="Implantodontia Avançada (Guiada)">Implantodontia Avançada (Guiada)</option>
+                                            <option value="Harmonização Orofacial & Facial">Harmonização Orofacial & Facial</option>
+                                            <option value="Diagnóstico Completo 3D & Check-up">Diagnóstico Completo 3D & Check-up</option>
+                                        </select>
+                                        <p id="specialty-error" class="text-[11px] text-red-400 mt-1 hidden">Selecione uma especialidade de interesse.</p>
+                                    </div>
+
+                                    <div>
+                                        <label for="period" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Melhor Período</label>
+                                        <select 
+                                            id="period" 
+                                            name="period" 
+                                            class="w-full bg-graphite-800 border border-graphite-700 focus:border-gold-400 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors cursor-pointer"
+                                        >
+                                            <option value="Manhã (08h às 12h)">Manhã (08h às 12h)</option>
+                                            <option value="Tarde (13h às 18h)">Tarde (13h às 18h)</option>
+                                            <option value="Noite (18h às 20h)">Noite (18h às 20h)</option>
+                                            <option value="Sábado (08h às 14h)">Sábado (08h às 14h)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Message / Observations Textarea -->
+                                <div>
+                                    <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Como podemos transformar seu sorriso? (Mensagem)</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        rows="2" 
+                                        placeholder="Conte-nos brevemente sobre sua expectativa ou necessidade..."
+                                        class="w-full bg-graphite-800/80 border border-graphite-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-graphite-500 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors resize-none"
+                                    ></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button 
+                                    type="submit" 
+                                    id="submit-form-btn"
+                                    class="w-full py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-graphite-950 gold-gradient-bg shadow-luxe hover:shadow-glow hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex items-center justify-center gap-2"
+                                >
+                                    <i data-lucide="calendar" class="w-4 h-4 text-graphite-950"></i>
+                                    <span>Confirmar Solicitação de Avaliação</span>
+                                </button>
+
+                                <p class="text-[11px] text-graphite-400 text-center flex items-center justify-center gap-1.5 pt-1">
+                                    <i data-lucide="lock" class="w-3.5 h-3.5 text-gold-500"></i>
+                                    <span>Seus dados são confidenciais e protegidos pela LGPD.</span>
+                                </p>
+                            </form>
+
+                            <!-- Success Feedback Modal / Overlay (Initially Hidden) -->
+                            <div id="form-success-message" class="hidden absolute inset-0 bg-graphite-950/95 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4 backdrop-blur-md z-20">
+                                <div class="w-16 h-16 rounded-full gold-gradient-bg text-graphite-950 flex items-center justify-center shadow-glow">
+                                    <i data-lucide="check" class="w-8 h-8 stroke-[3]"></i>
+                                </div>
+                                <h4 class="font-serif text-2xl font-bold text-white">Solicitação Recebida com Sucesso!</h4>
+                                <p class="text-sm text-graphite-300 max-w-sm" id="success-description">
+                                    Obrigado pela confiança. Nosso concierge entrará em contato via WhatsApp nas próximas horas para confirmar o seu horário privativo.
+                                </p>
+                                <button id="reset-form-btn" class="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-graphite-800 text-gold-300 hover:bg-graphite-700 transition-colors">
+                                    Enviar nova mensagem
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Copyright Sub-Footer -->
+                <div class="mt-20 pt-8 border-t border-graphite-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-graphite-500">
+                    <p>© 2026 AURA Odontologia Boutique. Todos os direitos reservados.</p>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="hover:text-gold-300 transition-colors">Política de Privacidade</a>
+                        <a href="#" class="hover:text-gold-300 transition-colors">Termos de Atendimento</a>
+                        <a href="#" class="hover:text-gold-300 transition-colors">Código de Ética Odontológica</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Concierge Button -->
+    <aside class="fixed bottom-6 right-6 z-40">
+        <a 
+            href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Aura%20Odontologia." 
+            target="_blank" 
+            rel="noopener" 
+            aria-label="Falar com Concierge no WhatsApp"
+            class="group flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white pl-4 pr-5 py-3 rounded-full shadow-2xl hover:shadow-emerald-600/40 hover:scale-105 active:scale-95 transition-all duration-300 border border-emerald-400/40"
+        >
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+            </span>
+            <div class="flex flex-col text-left">
+                <span class="text-[10px] text-emerald-100 uppercase tracking-wider font-semibold leading-none">Concierge VIP</span>
+                <span class="text-xs font-bold leading-tight">Agendar no WhatsApp</span>
+            </div>
+            <i data-lucide="message-circle" class="w-5 h-5 ml-1 fill-current"></i>
+        </a>
+    </aside>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion Interactivity
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                const isExpanded = !content.classList.contains('hidden');
+
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => {
+                    i.setAttribute('data-lucide', 'plus');
+                });
+
+                if (!isExpanded) {
+                    content.classList.remove('hidden');
+                    icon.setAttribute('data-lucide', 'minus');
+                }
+                lucide.createIcons();
+            });
+        });
+
+        // Phone Input Auto-Formatting Mask (Brazilian standard: (11) 99999-9999)
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+
+            if (value.length > 10) {
+                // (11) 99999-9999
+                e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+            } else if (value.length > 6) {
+                // (11) 9999-9999
+                e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+            } else if (value.length > 2) {
+                // (11) 9999
+                e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                e.target.value = `(${value}`;
+            }
+        });
+
+        // ==========================================
+        // WEB3FORMS: Validação & Envio Assíncrono (AJAX)
+        // ==========================================
+        const bookingForm = document.getElementById('booking-form');
+        const successMessage = document.getElementById('form-success-message');
+        const successDescription = document.getElementById('success-description');
+        const resetFormBtn = document.getElementById('reset-form-btn');
+        const submitBtn = document.getElementById('submit-form-btn');
+        const formErrorBanner = document.getElementById('form-error-banner');
+        const errorTitle = document.getElementById('error-title');
+        const errorMessage = document.getElementById('error-message');
+
+        // Form Fields
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+        const specialtyInput = document.getElementById('specialty');
+
+        // Error message elements
+        const nameError = document.getElementById('name-error');
+        const phoneError = document.getElementById('phone-error');
+        const emailError = document.getElementById('email-error');
+        const specialtyError = document.getElementById('specialty-error');
+
+        // Limpar alertas visuais ao digitar/interagir
+        [nameInput, phoneInput, emailInput, specialtyInput].forEach(input => {
+            if (!input) return;
+            input.addEventListener('input', () => {
+                input.classList.remove('border-red-500', 'ring-1', 'ring-red-500');
+                const fieldError = document.getElementById(`${input.id}-error`);
+                if (fieldError) fieldError.classList.add('hidden');
+                formErrorBanner.classList.add('hidden');
+            });
+            input.addEventListener('change', () => {
+                input.classList.remove('border-red-500', 'ring-1', 'ring-red-500');
+                const fieldError = document.getElementById(`${input.id}-error`);
+                if (fieldError) fieldError.classList.add('hidden');
+            });
+        });
+
+        // Validação dos campos do formulário
+        function validateBookingForm() {
+            let isValid = true;
+            let firstInvalidInput = null;
+
+            // 1. Validar Nome (mínimo 3 caracteres)
+            if (!nameInput.value.trim() || nameInput.value.trim().length < 3) {
+                nameInput.classList.add('border-red-500', 'ring-1', 'ring-red-500');
+                nameError.classList.remove('hidden');
+                if (!firstInvalidInput) firstInvalidInput = nameInput;
+                isValid = false;
+            } else {
+                nameInput.classList.remove('border-red-500', 'ring-1', 'ring-red-500');
+                nameError.classList.add('hidden');
+            }
+
+            // 2. Validar WhatsApp / Telefone (mínimo 10 dígitos)
+            const rawPhoneDigits = phoneInput.value.replace(/\D/g, '');
+            if (!rawPhoneDigits || rawPhoneDigits.length < 10) {
+                phoneInput.classList.add('border-red-500', 'ring-1', 'ring-red-500');
+                phoneError.classList.remove('hidden');
+                if (!firstInvalidInput) firstInvalidInput = phoneInput;
+                isValid = false;
+            } else {
+                phoneInput.classList.remove('border-red-500', 'ring-1', 'ring-red-500');
+                phoneError.classList.add('hidden');
+            }
+
+            // 3. Validar E-mail
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('border-red-500', 'ring-1', 'ring-red-500');
+                emailError.classList.remove('hidden');
+                if (!firstInvalidInput) firstInvalidInput = emailInput;
+                isValid = false;
+            } else {
+                emailInput.classList.remove('border-red-500', 'ring-1', 'ring-red-500');
+                emailError.classList.add('hidden');
+            }
+
+            // 4. Validar Especialidade
+            if (!specialtyInput.value || specialtyInput.value === '') {
+                specialtyInput.classList.add('border-red-500', 'ring-1', 'ring-red-500');
+                specialtyError.classList.remove('hidden');
+                if (!firstInvalidInput) firstInvalidInput = specialtyInput;
+                isValid = false;
+            } else {
+                specialtyInput.classList.remove('border-red-500', 'ring-1', 'ring-red-500');
+                specialtyError.classList.add('hidden');
+            }
+
+            if (firstInvalidInput) {
+                firstInvalidInput.focus();
+            }
+
+            return isValid;
+        }
+
+        // Submissão do Formulário via Web3Forms com Fetch API
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Executar Validação prévia
+            if (!validateBookingForm()) {
+                formErrorBanner.classList.remove('hidden');
+                errorTitle.textContent = 'Campos incompletos ou inválidos';
+                errorMessage.textContent = 'Por favor, revise os campos destacados em vermelho antes de enviar.';
+                lucide.createIcons();
+                return;
+            }
+
+            // Iniciar Estado de Carregamento
+            formErrorBanner.classList.add('hidden');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-graphite-950 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Enviando solicitação ao concierge...
+            `;
+
+            // Preparar dados do formulário
+            const formData = new FormData(bookingForm);
+            const formObject = Object.fromEntries(formData);
+            const clientName = (nameInput.value.trim().split(' ')[0] || 'Prezado(a)');
+
+            // Envio assíncrono para a API do Web3Forms
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formObject)
+            })
+            .then(async (response) => {
+                const responseData = await response.json();
+
+                if (response.status === 200 && responseData.success) {
+                    // Sucesso no envio
+                    successDescription.innerHTML = `
+                        Olá, <strong class="text-gold-300 font-semibold">${clientName}</strong>! Sua solicitação para <strong>${specialtyInput.value}</strong> foi recebida com sucesso. Nosso concierge entrará em contato via WhatsApp nas próximas horas para confirmar o seu horário privativo.
+                    `;
+                    successMessage.classList.remove('hidden');
+                    bookingForm.reset();
+                    lucide.createIcons();
+                } else {
+                    // Erro retornado pela API
+                    formErrorBanner.classList.remove('hidden');
+                    errorTitle.textContent = 'Não foi possível concluir o agendamento';
+                    errorMessage.textContent = responseData.message || 'Ocorreu um erro no servidor. Por favor, tente novamente ou fale diretamente via WhatsApp.';
+                    lucide.createIcons();
+                }
+            })
+            .catch((error) => {
+                // Erro de rede ou indisponibilidade
+                console.error('Web3Forms Error:', error);
+                formErrorBanner.classList.remove('hidden');
+                errorTitle.textContent = 'Falha de Conexão';
+                errorMessage.textContent = 'Houve uma instabilidade na conexão com o servidor. Você também pode agendar diretamente pelo botão de WhatsApp abaixo.';
+                lucide.createIcons();
+            })
+            .finally(() => {
+                // Restaurar botão
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `
+                    <i data-lucide="calendar" class="w-4 h-4 text-graphite-950"></i>
+                    <span>Confirmar Solicitação de Avaliação</span>
+                `;
+                lucide.createIcons();
+            });
+        });
+
+        // Botão para resetar e fechar modal de sucesso
+        resetFormBtn.addEventListener('click', () => {
+            bookingForm.reset();
+            successMessage.classList.add('hidden');
+            formErrorBanner.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
